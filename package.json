@@ -1,0 +1,25 @@
+{
+  "name": "rollup-middleware",
+  "version": "0.0.0",
+  "description": "Simple rollup middleware that rebuilds your bundles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dominik Burgdörfer <db@domachine.de> (https://domachine.de/)",
+  "license": "MIT",
+  "dependencies": {
+    "rollup": "^0.41.4"
+  },
+  "devDependencies": {
+    "express": "^4.14.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "redux": "^3.6.0",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rx": "^4.1.0"
+  }
+}
