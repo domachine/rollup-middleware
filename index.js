@@ -3,9 +3,10 @@
 const { join, relative, resolve } = require('path')
 const Rollup = require('rollup')
 
-module.exports = ({ rollup = {}, generate = {}, prefix = '.' }) => {
-  let caches = {}
+module.exports = ({ rollup = {}, generate = {}, prefix = '.', grep = /\.js$/ }) => {
+  const caches = {}
   return (req, res, next = () => {}) => {
+    if (!req.path.match(grep)) return next()
     const cache = caches[req.path]
     const ropts = Object.assign({}, rollup, {
       cache,

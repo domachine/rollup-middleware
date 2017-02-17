@@ -6,7 +6,7 @@ This is a simple express middleware to rebuild your bundles on request. It's int
 
 ## Installation
 
-	$ npm i -D rollup-middleware
+    $ npm i -D rollup-middleware
 
 ## Usage
 
@@ -15,13 +15,13 @@ This is a simple express middleware to rebuild your bundles on request. It's int
 
 const app = express()
 const opts = {
-  rollup: { 
+  rollup: {
     // This object is directly passed to rollup.rollup()
     // See https://github.com/rollup/rollup/wiki/JavaScript-API#rolluprollup-options-
 
     plugins: [ /* Pass your plugins */ ],
   },
-  
+
   generate: {
     // This object is directly passed to rollup.generate()
     // See https://github.com/rollup/rollup/wiki/JavaScript-API#bundlegenerate-options-
@@ -30,7 +30,10 @@ const opts = {
   },
 
   // This is used as a prefix to look for entry files
-  prefix: 'src'
+  prefix: 'src',
+
+  // Regex to serve only specific files
+  grep: /\.js$/
 }
 app.use('/js', rollup(opts))
 ```
