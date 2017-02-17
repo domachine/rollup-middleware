@@ -1,6 +1,6 @@
 {
   "name": "rollup-middleware",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Simple rollup middleware that rebuilds your bundles.",
   "main": "index.js",
   "scripts": {
